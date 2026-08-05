@@ -1,0 +1,444 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffd6e8);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
+    z-index:999;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#fff;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ffe5ec;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.glass{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:25px;
+    padding:50px;
+    width:90%;
+    max-width:700px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+#typing{
+    font-size:50px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.subtitle{
+    font-size:22px;
+    line-height:1.7;
+}
+
+.big-heart{
+    font-size:85px;
+    color:#ff1744;
+    margin:30px 0;
+    animation:heartbeat 1s infinite;
+}
+
+@keyframes heartbeat{
+
+0%{transform:scale(1);}
+
+50%{transform:scale(1.15);}
+
+100%{transform:scale(1);}
+
+}
+
+.counter-box{
+    background:rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:20px;
+    margin:25px 0;
+}
+
+.counter-box h2{
+    margin-bottom:10px;
+}
+
+#daysCounter{
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+button{
+    padding:14px 28px;
+    border:none;
+    border-radius:50px;
+    background:#ff1744;
+    color:white;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#ff4569;
+    transform:scale(1.05);
+}
+
+/* ==========================
+   SECTION
+========================== */
+
+section{
+    padding:80px 10%;
+}
+
+section h2{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+/* ==========================
+   SLIDER
+========================== */
+
+.slider{
+    width:100%;
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.slides{
+    display:flex;
+    width:max-content;
+    animation:slide 35s linear infinite;
+}
+
+.slides img{
+    width:350px;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-right:15px;
+}
+
+@keyframes slide{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
+/* ==========================
+   GALLERY
+========================== */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:20px;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* ==========================
+   POPUP
+========================== */
+
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.85);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+.popup img{
+    max-width:90%;
+    max-height:85%;
+    border-radius:20px;
+}
+
+.popup span{
+    position:absolute;
+    top:25px;
+    right:35px;
+    font-size:45px;
+    cursor:pointer;
+    color:white;
+}
+
+/* ==========================
+   LOVE LETTER
+========================== */
+
+.letter-card{
+    max-width:800px;
+    margin:auto;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:45px;
+    line-height:2;
+    font-size:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+/* ==========================
+   MEMORIES
+========================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.15);
+    padding:35px;
+    text-align:center;
+    font-size:22px;
+    border-radius:20px;
+    backdrop-filter:blur(12px);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    background:rgba(255,255,255,.25);
+}
+
+/* ==========================
+   SURPRISE
+========================== */
+
+.surprise{
+    text-align:center;
+}
+
+#surpriseText{
+    margin-top:30px;
+    font-size:34px;
+    color:#fff;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:rgba(255,255,255,.1);
+    margin-top:40px;
+}
+
+/* ==========================
+   FLOATING HEARTS
+========================== */
+
+#hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
+}
+
+#hearts::before{
+    content:"❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+    position:absolute;
+    width:100%;
+    top:-50px;
+    font-size:30px;
+    animation:hearts 15s linear infinite;
+}
+
+@keyframes hearts{
+
+0%{
+transform:translateY(-100px);
+}
+
+100%{
+transform:translateY(120vh);
+}
+
+}
+
+/* ==========================
+   PETALS
+========================== */
+
+#petals{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-2;
+}
+
+#petals::before{
+    content:"🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸";
+    position:absolute;
+    width:100%;
+    top:-50px;
+    font-size:26px;
+    animation:petals 18s linear infinite;
+}
+
+@keyframes petals{
+
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+
+100%{
+transform:translateY(120vh) rotate(360deg);
+}
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+padding:15px;
+}
+
+nav ul{
+margin-top:10px;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+#typing{
+font-size:34px;
+}
+
+.subtitle{
+font-size:18px;
+}
+
+.big-heart{
+font-size:65px;
+}
+
+section h2{
+font-size:30px;
+}
+
+.letter-card{
+padding:25px;
+font-size:17px;
+}
+
+.slides img{
+width:250px;
+height:180px;
+}
+
+.gallery img{
+height:220px;
+}
+
+button{
+font-size:16px;
+padding:12px 22px;
+}
+
+}
