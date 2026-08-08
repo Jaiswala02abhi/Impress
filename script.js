@@ -411,6 +411,7 @@ window.addEventListener("scroll", () => {
     });
 
 });
+
 let autoScrollTimer;
 
 function startAutoScroll() {
@@ -447,3 +448,4 @@ function startAutoScroll() {
 window.addEventListener("load", () => {
     startAutoScroll();
 });
+
