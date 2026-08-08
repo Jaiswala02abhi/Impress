@@ -411,3 +411,39 @@ window.addEventListener("scroll", () => {
     });
 
 });
+let autoScrollTimer;
+
+function startAutoScroll() {
+
+    autoScrollTimer = setInterval(() => {
+
+        const currentPosition = window.scrollY;
+        const pageHeight = document.documentElement.scrollHeight;
+        const screenHeight = window.innerHeight;
+
+        // If not at bottom → continue scrolling
+        if (currentPosition + screenHeight < pageHeight - 10) {
+
+            window.scrollBy({
+                top: screenHeight,
+                left: 0,
+                behavior: "smooth"
+            });
+
+        } else {
+
+            // Reached bottom → STOP auto scroll
+            clearInterval(autoScrollTimer);
+            autoScrollTimer = null;
+
+            console.log("Auto scroll completed!");
+        }
+
+    }, 2000); // Scroll every 2 seconds
+}
+
+
+// Start after page loads
+window.addEventListener("load", () => {
+    startAutoScroll();
+});
