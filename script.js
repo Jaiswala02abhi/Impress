@@ -439,7 +439,7 @@ function startAutoScroll() {
             console.log("Auto scroll completed!");
         }
 
-    }, 2000); // Scroll every 2 seconds
+    }, 5); // Scroll every 2 seconds
 }
 
 
